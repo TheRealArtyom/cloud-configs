@@ -16,5 +16,8 @@ sed -i "1399i\acl proxy0 myip $1" /etc/squid/squid.conf
 sed -i "1400i\tcp_outgoing_address $1 proxy0" /etc/squid/squid.conf
 
 systemctl restart squid
+
+wget https://raw.githubusercontent.com/TheRealArtyom/cloud-configs/main/scripts/add-ip.sh
+
 echo "rebooting..."
 reboot now
