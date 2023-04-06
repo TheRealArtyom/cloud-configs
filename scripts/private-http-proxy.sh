@@ -11,4 +11,5 @@ sed -i '1404i\auth_param basic realm proxy' /etc/squid/squid.conf
 sed -i '1405i\acl authenticated proxy_auth REQUIRED' /etc/squid/squid.conf
 sed -i '1406i\http_access allow authenticated' /etc/squid/squid.conf
 systemctl restart squid
+echo "rebooting..."
 reboot now
