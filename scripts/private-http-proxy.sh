@@ -29,8 +29,8 @@ sed -i '1405i\acl authenticated proxy_auth REQUIRED' /etc/squid/squid.conf
 sed -i '1406i\http_access allow authenticated' /etc/squid/squid.conf
 
 # add default ip
-sed -i "1399i\acl proxy0 myip $1" /etc/squid/squid.conf
-sed -i "1400i\tcp_outgoing_address $1 proxy0" /etc/squid/squid.conf
+#sed -i "1399i\acl proxy0 myip $1" /etc/squid/squid.conf
+#sed -i "1400i\tcp_outgoing_address $1 proxy0" /etc/squid/squid.conf
 
 # restart 
 systemctl restart squid
