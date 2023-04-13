@@ -5,15 +5,15 @@ apt update && apt dist-upgrade -y
 apt install -y squid apache2-utils
 
 # apply custom network config, we don't need ipv6
-echo "auto lo" > /etc/network/interfaces.d/50-cloud-init
-echo "iface lo inet loopback" >> /etc/network/interfaces.d/50-cloud-init
-echo "    dns-nameservers 213.186.33.99" >> /etc/network/interfaces.d/50-cloud-init
-echo "" >> /etc/network/interfaces.d/50-cloud-init
-echo "auto ens3" >> /etc/network/interfaces.d/50-cloud-init
-echo "iface ens3 inet dhcp" >> /etc/network/interfaces.d/50-cloud-init
-echo "    accept_ra 0" >> /etc/network/interfaces.d/50-cloud-init
-echo "    mtu 1500" >> /etc/network/interfaces.d/50-cloud-init
-echo "" >> /etc/network/interfaces.d/50-cloud-init
+#echo "auto lo" > /etc/network/interfaces.d/50-cloud-init
+#echo "iface lo inet loopback" >> /etc/network/interfaces.d/50-cloud-init
+#echo "    dns-nameservers 213.186.33.99" >> /etc/network/interfaces.d/50-cloud-init
+#echo "" >> /etc/network/interfaces.d/50-cloud-init
+#echo "auto ens3" >> /etc/network/interfaces.d/50-cloud-init
+#echo "iface ens3 inet dhcp" >> /etc/network/interfaces.d/50-cloud-init
+#echo "    accept_ra 0" >> /etc/network/interfaces.d/50-cloud-init
+#echo "    mtu 1500" >> /etc/network/interfaces.d/50-cloud-init
+#echo "" >> /etc/network/interfaces.d/50-cloud-init
 
 systemctl restart networking
 
