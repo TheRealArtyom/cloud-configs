@@ -18,7 +18,7 @@ apt install -y squid apache2-utils
 systemctl restart networking
 
 # create user
-htpasswd -b -c /etc/squid/passwords artyom sunrise
+htpasswd -b -c /etc/squid/passwords $2 $3
 systemctl start squid
 systemctl enable squid
 
