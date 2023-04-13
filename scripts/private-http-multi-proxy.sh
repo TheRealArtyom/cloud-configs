@@ -41,6 +41,7 @@ systemctl restart squid
 
 # download our tools
 wget https://raw.githubusercontent.com/TheRealArtyom/cloud-configs/main/scripts/add-ip.sh
+chmod +x add-ip.sh
 
 echo "rebooting..."
 reboot now
