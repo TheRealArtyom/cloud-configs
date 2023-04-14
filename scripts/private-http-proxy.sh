@@ -13,7 +13,7 @@ apt install -y squid apache2-utils ufw
 
 
 # apply firewall
-ufw --force enable && ufw allow ssh
+ufw --force enable && ufw allow ssh && ufw allow && ufw allow  3128/tcp
 
 
 # install node exporter
